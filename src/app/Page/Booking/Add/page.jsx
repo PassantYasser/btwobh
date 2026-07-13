@@ -1,13 +1,14 @@
 'use client'
 import DashboardLayout from "@/app/Components/Layout/DashboardLayout";
 import { useState  } from "react";
-import Formpage from "./Form/page";
-import UploadPage from "./Upload/page";
+import Formpage from "./Form/Form";
+import UploadPage from "./Upload/Upload";
 import { useDispatch } from "react-redux";
 import { AddProductThunk, getProductsThunk } from "@/app/Redux/Features/Product/ProductSlice";
+import { useRouter } from "next/navigation";
 
 function AddPage() {
-
+  const router= useRouter()
   const dispatch =useDispatch()
   const [formData , setFormData] = useState({
     "title":'',
@@ -26,6 +27,7 @@ function AddPage() {
     try{
       await dispatch(AddProductThunk(formData))
       await dispatch(getProductsThunk())
+      router.push(`/Page/Booking`)
     }catch(error){
       console.log('error' , error)
     }finally{

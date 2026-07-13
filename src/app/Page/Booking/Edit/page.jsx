@@ -1,8 +1,8 @@
 'use client'
 import DashboardLayout from "@/app/Components/Layout/DashboardLayout";
 import { Suspense, useEffect, useState } from "react";
-import Formpage from "./Form/page";
-import UploadPage from "./Upload/page";
+import Formpage from "./Form/Form";
+import UploadPage from "./Upload/Upload";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
