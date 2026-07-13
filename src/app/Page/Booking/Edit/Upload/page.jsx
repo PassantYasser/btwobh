@@ -15,7 +15,7 @@ function UploadPage({ formData, setFormData }) {
     } else {
       setImages([]);
     }
-  }, [formData.images]);
+  }, [formData?.images]);
 
   const handleFileChange = (e) => {
     const files = Array.from(e.target.files);
@@ -114,7 +114,7 @@ function UploadPage({ formData, setFormData }) {
             </p>
           </div>
 
-          {images.length > 0 && images.length < 6 && (
+          {images?.length > 0 && images?.length < 6 && (
             <button
               type="button"
               onClick={() => fileInputRef.current.click()}
@@ -145,7 +145,7 @@ function UploadPage({ formData, setFormData }) {
           <>
             {/* Images */}
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6">
-              {images.map((img, index) => (
+              {images?.map((img, index) => (
                 <div
                   key={index}
                   className="group relative overflow-hidden rounded-xl border border-gray-200 bg-gray-50"
@@ -166,7 +166,7 @@ function UploadPage({ formData, setFormData }) {
                 </div>
               ))}
 
-              {images.length < 6 && (
+              {images?.length < 6 && (
                 <div
                   onClick={() => fileInputRef.current.click()}
                   className="flex aspect-square cursor-pointer items-center justify-center rounded-xl border-2 border-dashed border-gray-300 bg-gray-50 text-4xl font-light text-gray-400 transition hover:border-blue-500 hover:bg-blue-50 hover:text-blue-600"
