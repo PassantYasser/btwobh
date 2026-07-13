@@ -1,4 +1,4 @@
-import { Star } from 'lucide-react';
+'use client'
 import React, { useState } from 'react'
 
 function Formpage({formData , setFormData}) {

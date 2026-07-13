@@ -3,8 +3,7 @@ import React from 'react'
 import { ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from 'lucide-react'
 
 function Pagination({ currentPage, totalPages, onPageChange }) {
-
-
+  
   const getPageNumbers = () => {
     const pages = [];
     const maxVisiblePages = 5;

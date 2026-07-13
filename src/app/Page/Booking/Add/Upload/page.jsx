@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useRef, useState, useEffect } from "react";
 
 function UploadPage({formData , setFormData}) {
